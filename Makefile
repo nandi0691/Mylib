@@ -14,4 +14,5 @@ clean:
 	rm -rf Dll_util.o
 	rm -rf libd_ll.a
 	rm -rf appl.o
+	rm -rf exe
 
