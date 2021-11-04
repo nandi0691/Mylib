@@ -24,3 +24,21 @@ gcc appl.o -o exe -L . -ldll
 "gcc appl.o -o exe  -ldll"
 //run the executable
 
+/*Below is the commands to know what happens during 4 stages of compilation*/
+//PreProcessing
+"gcc -E test.c -o test_preProc.c" //Here we will see all the commands after '#' will be run
+
+
+//Compilation Stage
+//Assembly code will be generated
+"gcc -S test_preProc.c -o test.s"
+
+//Assembler Stage
+//Assembly code is converted into object code
+"gcc -c test.s -o test.o"
+//Above object file is not readable
+"objDump -D test.o > TestDump.txt"
+
+
+//Linking Stage
+//All external libraries if any will be linked here
